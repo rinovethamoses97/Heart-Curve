@@ -21,4 +21,6 @@ function draw(){
     if(angle>=360){
       noLoop();
     }
+    textSize(60);
+    text("Dontate Blood",width/2-180,height/2+300);
 }
