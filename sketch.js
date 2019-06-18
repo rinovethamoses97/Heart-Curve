@@ -1,6 +1,8 @@
 let radius=10;
 let vertices=[];
 let angle=0;
+let msg="Donate Blood"
+let index=0;
 function setup(){
     createCanvas(screen.width,screen.height);
 }
@@ -21,6 +23,13 @@ function draw(){
     if(angle>=360){
       noLoop();
     }
-    textSize(60);
-    text("Dontate Blood",width/2-180,height/2+300);
+    if(frameCount%28!=0){
+      textSize(60);
+      text(msg.substr(0,index),width/2-180,height/2+300);
+    }
+    else{
+      textSize(60);
+      text(msg.substr(0,index),width/2-180,height/2+300);
+      index++;
+    }
 }
